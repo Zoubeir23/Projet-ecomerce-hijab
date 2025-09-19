@@ -1,0 +1,252 @@
+// Variables personnalisées pour le thème hijab
+$primary: #8B4513; // Marron élégant
+$secondary: #D4AF37; // Or
+$success: #28a745;
+$info: #17a2b8;
+$warning: #ffc107;
+$danger: #dc3545;
+$light: #f8f9fa;
+$dark: #343a40;
+
+// Couleurs spécifiques au thème
+$hijab-brown: #8B4513;
+$hijab-gold: #D4AF37;
+$hijab-cream: #F5F5DC;
+$hijab-rose: #F4C2C2;
+
+// Typography
+$font-family-base: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$font-size-base: 1rem;
+$line-height-base: 1.5;
+
+// Personnalisation des composants Bootstrap
+$border-radius: 0.5rem;
+$border-radius-sm: 0.375rem;
+$border-radius-lg: 0.75rem;
+
+$box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+$box-shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+$box-shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+
+// Import Bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+// Styles personnalisés
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: $hijab-brown !important;
+}
+
+.btn-primary {
+  background-color: $hijab-brown;
+  border-color: $hijab-brown;
+  
+  &:hover {
+    background-color: darken($hijab-brown, 10%);
+    border-color: darken($hijab-brown, 10%);
+  }
+}
+
+.btn-outline-primary {
+  color: $hijab-brown;
+  border-color: $hijab-brown;
+  
+  &:hover {
+    background-color: $hijab-brown;
+    border-color: $hijab-brown;
+  }
+}
+
+.product-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  box-shadow: $box-shadow;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: $box-shadow-lg;
+  }
+}
+
+.price-text {
+  color: $hijab-brown;
+  font-weight: 600;
+}
+
+.original-price {
+  color: #6c757d;
+  text-decoration: line-through;
+}
+
+.discount-badge {
+  background-color: $danger;
+  color: white;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: $border-radius-sm;
+}
+
+.hero-section {
+  background: linear-gradient(135deg, $hijab-brown 0%, darken($hijab-brown, 15%) 100%);
+  color: white;
+  min-height: 500px;
+}
+
+.category-card {
+  border: none;
+  box-shadow: $box-shadow;
+  transition: transform 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-3px);
+  }
+}
+
+.color-option {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 2px solid #dee2e6;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.color-option-large {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 3px solid #dee2e6;
+  cursor: pointer;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+  
+  &:hover {
+    transform: scale(1.05);
+  }
+  
+  &.selected {
+    border-color: $hijab-brown;
+    border-width: 3px;
+  }
+}
+
+.color-selector {
+  text-align: center;
+  cursor: pointer;
+  
+  small {
+    font-size: 0.7rem;
+    color: #6c757d;
+  }
+}
+
+.product-image {
+  border-radius: $border-radius;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.product-image-main {
+  border-radius: $border-radius;
+  overflow: hidden;
+  
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.whatsapp-btn {
+  background-color: #25D366;
+  border-color: #25D366;
+  color: white;
+  
+  &:hover {
+    background-color: darken(#25D366, 10%);
+    border-color: darken(#25D366, 10%);
+    color: white;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Styles responsive
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: 400px;
+    text-align: center;
+  }
+  
+  .display-4 {
+    font-size: 2rem;
+  }
+  
+  .product-card {
+    margin-bottom: 1rem;
+  }
+  
+  .color-option-large {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+// Animations pour les produits
+.product-card {
+  &:hover .product-image {
+    transform: scale(1.02);
+  }
+}
+
+// Style pour les badges
+.badge {
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+
+// Style pour les breadcrumbs
+.breadcrumb {
+  background-color: transparent;
+  padding: 0;
+  
+  .breadcrumb-item {
+    + .breadcrumb-item::before {
+      content: "›";
+      color: #6c757d;
+    }
+  }
+}
+
+// Loading states
+.loading-skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}

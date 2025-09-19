@@ -1,0 +1,36 @@
+{
+  "name": "site-hijab-dakar",
+  "version": "1.0.0",
+  "description": "Site e-commerce professionnel pour hijabs et mode islamique à Dakar",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.8",
+    "bootstrap-icons": "^1.13.1",
+    "next": "^14.2.32",
+    "react": "18.3.1",
+    "react-bootstrap": "^2.10.10",
+    "react-dom": "18.3.1",
+    "sass": "^1.93.0"
+  },
+  "devDependencies": {
+    "@types/node": "20.14.10",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "typescript": "5.5.3"
+  },
+  "keywords": [
+    "hijab",
+    "e-commerce",
+    "dakar",
+    "senegal",
+    "mode-islamique"
+  ],
+  "author": "Site Hijab Dakar",
+  "license": "MIT"
+}

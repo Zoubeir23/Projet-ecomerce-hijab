@@ -1,0 +1,42 @@
+{
+  "siteName": "Hijab Élégance Dakar",
+  "tagline": "Votre boutique de mode islamique au Sénégal",
+  "description": "Découvrez notre collection exclusive de hijabs, abayas et accessoires de mode islamique. Qualité premium, livraison à Dakar et dans tout le Sénégal.",
+  "logo": "/images/logo.png",
+  "contact": {
+    "whatsapp": "+221781234567",
+    "phone": "+221781234567",
+    "email": "contact@hijabelegancedakar.com",
+    "address": {
+      "street": "Avenue Léopold Sédar Senghor",
+      "city": "Plateau, Dakar",
+      "country": "Sénégal"
+    },
+    "hours": [
+      "Lundi - Vendredi: 9h00 - 19h00",
+      "Samedi: 9h00 - 18h00",
+      "Dimanche: 14h00 - 17h00"
+    ]
+  },
+  "socialMedia": {
+    "instagram": "https://instagram.com/hijabelegancedakar",
+    "facebook": "https://facebook.com/hijabelegancedakar",
+    "tiktok": "https://tiktok.com/@hijabelegancedakar"
+  },
+  "shipping": {
+    "freeShippingThreshold": 50000,
+    "standardFee": 2000,
+    "areas": {
+      "dakar": {
+        "name": "Dakar et banlieue",
+        "deliveryTime": "24-48h",
+        "fee": 1500
+      },
+      "senegal": {
+        "name": "Reste du Sénégal",
+        "deliveryTime": "2-5 jours",
+        "fee": 2000
+      }
+    }
+  }
+}

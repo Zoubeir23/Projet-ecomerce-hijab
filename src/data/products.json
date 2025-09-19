@@ -1,0 +1,184 @@
+[
+  {
+    "id": "hijab-soie-premium-001",
+    "name": "Hijab Soie Premium - Collection Élégance",
+    "description": "Hijab en soie naturelle de haute qualité, parfait pour les occasions spéciales. Doux au toucher et d'une élégance incomparable.",
+    "price": 25000,
+    "originalPrice": 30000,
+    "category": {
+      "id": "hijabs",
+      "name": "Hijabs",
+      "slug": "hijabs"
+    },
+    "images": [
+      "/images/products/hijab-soie-premium-001-1.jpg",
+      "/images/products/hijab-soie-premium-001-2.jpg",
+      "/images/products/hijab-soie-premium-001-3.jpg"
+    ],
+    "colors": [
+      { "name": "Noir Élégant", "value": "#000000" },
+      { "name": "Beige Doré", "value": "#F5F5DC" },
+      { "name": "Bleu Nuit", "value": "#191970" },
+      { "name": "Rose Poudré", "value": "#F4C2C2" }
+    ],
+    "sizes": [
+      { "name": "Standard", "value": "standard", "inStock": true }
+    ],
+    "materials": ["Soie naturelle 100%"],
+    "inStock": true,
+    "featured": true,
+    "isNew": true,
+    "discount": 17,
+    "tags": ["soie", "premium", "élégant", "occasions-spéciales"]
+  },
+  {
+    "id": "hijab-jersey-quotidien-002",
+    "name": "Hijab Jersey Confort - Usage Quotidien",
+    "description": "Hijab en jersey stretch ultra-confortable, idéal pour le quotidien. Facile d'entretien et ne glisse pas.",
+    "price": 8000,
+    "category": {
+      "id": "hijabs",
+      "name": "Hijabs",
+      "slug": "hijabs"
+    },
+    "images": [
+      "/images/products/hijab-jersey-002-1.jpg",
+      "/images/products/hijab-jersey-002-2.jpg"
+    ],
+    "colors": [
+      { "name": "Noir", "value": "#000000" },
+      { "name": "Blanc", "value": "#FFFFFF" },
+      { "name": "Gris", "value": "#808080" },
+      { "name": "Marron", "value": "#8B4513" },
+      { "name": "Bleu Marine", "value": "#000080" }
+    ],
+    "sizes": [
+      { "name": "Standard", "value": "standard", "inStock": true }
+    ],
+    "materials": ["Jersey stretch 95% coton, 5% elasthane"],
+    "inStock": true,
+    "featured": true,
+    "isNew": false,
+    "tags": ["jersey", "confort", "quotidien", "pratique"]
+  },
+  {
+    "id": "abaya-moderne-003",
+    "name": "Abaya Moderne - Coupe Droite",
+    "description": "Abaya moderne avec une coupe droite élégante. Parfaite pour le travail et les sorties décontractées.",
+    "price": 45000,
+    "originalPrice": 55000,
+    "category": {
+      "id": "abayas",
+      "name": "Abayas",
+      "slug": "abayas"
+    },
+    "images": [
+      "/images/products/abaya-moderne-003-1.jpg",
+      "/images/products/abaya-moderne-003-2.jpg",
+      "/images/products/abaya-moderne-003-3.jpg"
+    ],
+    "colors": [
+      { "name": "Noir Classique", "value": "#000000" },
+      { "name": "Gris Anthracite", "value": "#2F4F4F" },
+      { "name": "Bleu Marine", "value": "#000080" }
+    ],
+    "sizes": [
+      { "name": "S (36-38)", "value": "S", "inStock": true },
+      { "name": "M (40-42)", "value": "M", "inStock": true },
+      { "name": "L (44-46)", "value": "L", "inStock": true },
+      { "name": "XL (48-50)", "value": "XL", "inStock": false }
+    ],
+    "materials": ["Polyester haute qualité", "Doublure coton"],
+    "inStock": true,
+    "featured": true,
+    "isNew": false,
+    "discount": 18,
+    "tags": ["abaya", "moderne", "travail", "élégant"]
+  },
+  {
+    "id": "khimar-long-004",
+    "name": "Khimar Long - Protection Complète",
+    "description": "Khimar long offrant une protection complète tout en restant élégant. Matière fluide et agréable à porter.",
+    "price": 32000,
+    "category": {
+      "id": "khimars",
+      "name": "Khimars",
+      "slug": "khimars"
+    },
+    "images": [
+      "/images/products/khimar-long-004-1.jpg",
+      "/images/products/khimar-long-004-2.jpg"
+    ],
+    "colors": [
+      { "name": "Noir", "value": "#000000" },
+      { "name": "Marron Chocolat", "value": "#8B4513" },
+      { "name": "Bordeaux", "value": "#800020" }
+    ],
+    "sizes": [
+      { "name": "Taille Unique", "value": "unique", "inStock": true }
+    ],
+    "materials": ["Crêpe fluide", "100% polyester"],
+    "inStock": true,
+    "featured": false,
+    "isNew": true,
+    "tags": ["khimar", "long", "protection", "fluide"]
+  },
+  {
+    "id": "ensemble-hijab-005",
+    "name": "Ensemble Hijab + Bandeau - Pack Économique",
+    "description": "Pack économique comprenant un hijab en mousseline et un bandeau sous-hijab. Parfait pour débuter.",
+    "price": 12000,
+    "originalPrice": 15000,
+    "category": {
+      "id": "ensembles",
+      "name": "Ensembles",
+      "slug": "ensembles"
+    },
+    "images": [
+      "/images/products/ensemble-hijab-005-1.jpg",
+      "/images/products/ensemble-hijab-005-2.jpg"
+    ],
+    "colors": [
+      { "name": "Noir", "value": "#000000" },
+      { "name": "Blanc", "value": "#FFFFFF" },
+      { "name": "Beige", "value": "#F5F5DC" }
+    ],
+    "sizes": [
+      { "name": "Standard", "value": "standard", "inStock": true }
+    ],
+    "materials": ["Mousseline polyester", "Bandeau coton"],
+    "inStock": true,
+    "featured": false,
+    "isNew": false,
+    "discount": 20,
+    "tags": ["ensemble", "économique", "débutant", "pack"]
+  },
+  {
+    "id": "hijab-imprime-fleuri-006",
+    "name": "Hijab Imprimé Fleuri - Collection Printemps",
+    "description": "Hijab avec motifs floraux délicats, parfait pour égayer vos tenues printemps-été.",
+    "price": 15000,
+    "category": {
+      "id": "hijabs",
+      "name": "Hijabs",
+      "slug": "hijabs"
+    },
+    "images": [
+      "/images/products/hijab-fleuri-006-1.jpg",
+      "/images/products/hijab-fleuri-006-2.jpg"
+    ],
+    "colors": [
+      { "name": "Rose Fleuri", "value": "#FFB6C1" },
+      { "name": "Bleu Fleuri", "value": "#87CEEB" },
+      { "name": "Vert Fleuri", "value": "#98FB98" }
+    ],
+    "sizes": [
+      { "name": "Standard", "value": "standard", "inStock": true }
+    ],
+    "materials": ["Voile polyester", "Impression numérique"],
+    "inStock": true,
+    "featured": false,
+    "isNew": true,
+    "tags": ["imprimé", "fleuri", "printemps", "coloré"]
+  }
+]

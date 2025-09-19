@@ -1,0 +1,37 @@
+[
+  {
+    "id": "hijabs",
+    "name": "Hijabs",
+    "slug": "hijabs",
+    "description": "Collection complète de hijabs pour tous les goûts et occasions",
+    "image": "/images/categories/hijabs.jpg"
+  },
+  {
+    "id": "abayas",
+    "name": "Abayas",
+    "slug": "abayas",
+    "description": "Abayas modernes et traditionnelles pour un style élégant",
+    "image": "/images/categories/abayas.jpg"
+  },
+  {
+    "id": "khimars",
+    "name": "Khimars",
+    "slug": "khimars",
+    "description": "Khimars longs pour une protection complète et stylée",
+    "image": "/images/categories/khimars.jpg"
+  },
+  {
+    "id": "ensembles",
+    "name": "Ensembles",
+    "slug": "ensembles",
+    "description": "Packs économiques et ensembles coordonnés",
+    "image": "/images/categories/ensembles.jpg"
+  },
+  {
+    "id": "accessoires",
+    "name": "Accessoires",
+    "slug": "accessoires",
+    "description": "Bandeaux, épingles et accessoires pour hijab",
+    "image": "/images/categories/accessoires.jpg"
+  }
+]
