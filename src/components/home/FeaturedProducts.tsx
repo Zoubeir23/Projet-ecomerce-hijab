@@ -4,118 +4,176 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
-import Badge from 'react-bootstrap/Badge'
 import Button from 'react-bootstrap/Button'
-import Link from 'next/link'
-import { Product } from '@/types'
-import productsData from '@/data/products.json'
+import Badge from 'react-bootstrap/Badge'
+import Image from 'next/image'
 
 export default function FeaturedProducts() {
-  // Filtrer les produits mis en avant
-  const featuredProducts = productsData.filter(product => product.featured).slice(0, 6)
-
-  const formatPrice = (price: number) => {
-    return new Intl.NumberFormat('fr-FR').format(price) + ' FCFA'
-  }
+  const products = [
+    {
+      id: 1,
+      name: "Hijab Soie Rose Poudré",
+      price: "25,000",
+      originalPrice: "30,000",
+      image: "/image/img-09.jpg",
+      isNew: true,
+      discount: 17,
+      rating: 4.8,
+      reviews: 24
+    },
+    {
+      id: 2,
+      name: "Hijab Jersey Bleu Ciel",
+      price: "15,000",
+      originalPrice: "18,000",
+      image: "/image/img-10.jpg",
+      isNew: false,
+      discount: 17,
+      rating: 4.9,
+      reviews: 31
+    },
+    {
+      id: 3,
+      name: "Hijab Coton Lavande",
+      price: "20,000",
+      image: "/image/img-11.jpg",
+      isNew: true,
+      rating: 4.7,
+      reviews: 18
+    },
+    {
+      id: 4,
+      name: "Hijab Premium Beige",
+      price: "28,000",
+      originalPrice: "35,000",
+      image: "/image/img-12.jpg",
+      isNew: false,
+      discount: 20,
+      rating: 5.0,
+      reviews: 42
+    },
+    {
+      id: 5,
+      name: "Hijab Satin Mint",
+      price: "22,000",
+      image: "/image/img-13.jpg",
+      isNew: true,
+      rating: 4.6,
+      reviews: 15
+    },
+    {
+      id: 6,
+      name: "Hijab Crêpe Corail",
+      price: "24,000",
+      originalPrice: "28,000",
+      image: "/image/img-14.jpg",
+      isNew: false,
+      discount: 14,
+      rating: 4.8,
+      reviews: 27
+    }
+  ]
 
   return (
-    <section className="py-5">
+    <section className="featured-products-section py-5 bg-light">
       <Container>
         <Row className="mb-5">
           <Col lg={8} className="mx-auto text-center">
-            <h2 className="display-5 fw-bold mb-3">Produits Vedettes</h2>
-            <p className="lead text-muted">
-              Découvrez notre sélection de produits les plus appréciés par nos clientes
-            </p>
+            <div className="section-header">
+              <span className="section-subtitle">Produits Phares</span>
+              <h2 className="section-title">
+                Nos <span className="text-primary">Coups de Cœur</span>
+              </h2>
+              <p className="section-description">
+                Découvrez les hijabs les plus appréciés par nos clientes, 
+                sélectionnés pour leur qualité exceptionnelle et leur style intemporel.
+              </p>
+            </div>
           </Col>
         </Row>
-        
+
         <Row className="g-4">
-          {featuredProducts.map((product: Product) => (
+          {products.map((product) => (
             <Col md={6} lg={4} key={product.id}>
               <Card className="product-card h-100 border-0 shadow-sm">
-                <div className="position-relative">
-                  <div 
-                    className="bg-light"
-                    style={{ height: '300px', backgroundColor: '#f8f9fa' }}
-                  >
-                    <div className="d-flex align-items-center justify-content-center h-100">
-                      <i className="bi bi-image display-3 text-muted"></i>
-                    </div>
-                  </div>
+                <div className="product-image-wrapper">
+                  <Image
+                    src={product.image}
+                    alt={product.name}
+                    width={300}
+                    height={300}
+                    className="product-image"
+                  />
                   
-                  {/* Badges */}
-                  <div className="position-absolute top-0 start-0 m-3">
+                  <div className="product-badges">
                     {product.isNew && (
-                      <Badge bg="success" className="me-2">Nouveau</Badge>
+                      <Badge bg="success" className="product-badge">Nouveau</Badge>
                     )}
                     {product.discount && (
-                      <Badge bg="danger">-{product.discount}%</Badge>
+                      <Badge bg="danger" className="product-badge">-{product.discount}%</Badge>
                     )}
+                  </div>
+                  
+                  <div className="product-actions">
+                    <Button variant="light" size="sm" className="action-btn">
+                      <i className="bi bi-heart"></i>
+                    </Button>
+                    <Button variant="light" size="sm" className="action-btn">
+                      <i className="bi bi-eye"></i>
+                    </Button>
+                    <Button variant="primary" size="sm" className="action-btn-primary">
+                      <i className="bi bi-bag-plus"></i>
+                    </Button>
                   </div>
                 </div>
                 
-                <Card.Body>
-                  <h6 className="card-title fw-bold">{product.name}</h6>
-                  <p className="card-text text-muted small">
-                    {product.description.substring(0, 100)}...
-                  </p>
+                <Card.Body className="p-4">
+                  <div className="product-rating mb-2">
+                    <div className="stars">
+                      {[...Array(5)].map((_, i) => (
+                        <i 
+                          key={i} 
+                          className={`bi bi-star${i < Math.floor(product.rating) ? '-fill' : ''}`}
+                        ></i>
+                      ))}
+                    </div>
+                    <span className="rating-text">({product.reviews})</span>
+                  </div>
                   
-                  {/* Prix */}
-                  <div className="mb-3">
-                    <span className="price-text fs-5 fw-bold">
-                      {formatPrice(product.price)}
-                    </span>
+                  <h5 className="product-name">{product.name}</h5>
+                  
+                  <div className="product-price">
+                    <span className="current-price">{product.price} FCFA</span>
                     {product.originalPrice && (
-                      <span className="original-price ms-2 small">
-                        {formatPrice(product.originalPrice)}
-                      </span>
+                      <span className="original-price">{product.originalPrice} FCFA</span>
                     )}
                   </div>
                   
-                  {/* Couleurs disponibles */}
-                  <div className="mb-3">
-                    <small className="text-muted d-block mb-2">
-                      {product.colors.length} couleur(s) disponible(s)
-                    </small>
-                    <div className="d-flex gap-1">
-                      {product.colors.slice(0, 4).map((color, index) => (
-                        <div 
-                          key={index}
-                          className="color-option"
-                          style={{ backgroundColor: color.value }}
-                          title={color.name}
-                        ></div>
-                      ))}
-                      {product.colors.length > 4 && (
-                        <small className="text-muted align-self-center ms-1">
-                          +{product.colors.length - 4}
-                        </small>
-                      )}
+                  <div className="product-colors mt-3">
+                    <span className="colors-label">Couleurs disponibles:</span>
+                    <div className="color-options">
+                      <div className="color-option" style={{backgroundColor: '#F8BBD9'}}></div>
+                      <div className="color-option" style={{backgroundColor: '#87CEEB'}}></div>
+                      <div className="color-option" style={{backgroundColor: '#E6E6FA'}}></div>
+                      <div className="color-option" style={{backgroundColor: '#F5F5DC'}}></div>
                     </div>
                   </div>
                   
-                  <div className="d-grid">
-                    <Link href={`/produits/${product.id}`} className="text-decoration-none">
-                      <Button variant="outline-primary" size="sm" className="w-100">
-                        Voir les détails
-                      </Button>
-                    </Link>
-                  </div>
+                  <Button variant="outline-primary" className="w-100 mt-3 add-to-cart-btn">
+                    Ajouter au Panier
+                  </Button>
                 </Card.Body>
               </Card>
             </Col>
           ))}
         </Row>
-        
+
         <Row className="mt-5">
           <Col className="text-center">
-            <Link href="/produits" className="text-decoration-none">
-              <Button variant="primary" size="lg">
-                Voir tous nos produits
-                <i className="bi bi-arrow-right ms-2"></i>
-              </Button>
-            </Link>
+            <Button size="lg" variant="primary" className="btn-view-all">
+              Voir Tous les Produits
+              <i className="bi bi-arrow-right ms-2"></i>
+            </Button>
           </Col>
         </Row>
       </Container>

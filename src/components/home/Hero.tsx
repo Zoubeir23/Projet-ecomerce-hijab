@@ -4,52 +4,108 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
-import Link from 'next/link'
-import siteConfig from '@/data/site-config.json'
+import Image from 'next/image'
 
 export default function Hero() {
   return (
-    <section className="hero-section d-flex align-items-center">
-      <Container>
-        <Row className="align-items-center min-vh-50">
+    <section className="hero-section">
+      <div className="hero-background">
+        <Image
+          src="/image/img-01.jpg"
+          alt="Hijabs colorés élégants"
+          fill
+          className="hero-image"
+          priority
+        />
+        <div className="hero-overlay"></div>
+      </div>
+      
+      <Container className="hero-content">
+        <Row className="align-items-center min-vh-100">
           <Col lg={6} className="text-center text-lg-start">
-            <h1 className="display-4 fw-bold mb-3 fade-in">
-              Mode Islamique Premium à Dakar
-            </h1>
-            <p className="lead mb-4 fade-in">
-              Découvrez notre collection exclusive de hijabs, abayas et accessoires. 
-              Qualité exceptionnelle, livraison rapide dans tout le Sénégal.
-            </p>
-            <div className="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start fade-in">
-              <Link href="/produits" className="text-decoration-none">
-                <Button size="lg" className="btn-primary w-100">
-                  <i className="bi bi-bag-fill me-2"></i>
-                  Découvrir nos produits
+            <div className="hero-text">
+              <h1 className="hero-title">
+                <span className="title-line-1">Élégance</span>
+                <span className="title-line-2">& Modestie</span>
+                <span className="title-line-3">Réunies</span>
+              </h1>
+              
+              <p className="hero-subtitle">
+                Découvrez notre collection exclusive de hijabs et voiles, 
+                soigneusement sélectionnés pour allier beauté, confort et respect des traditions.
+              </p>
+              
+              <div className="hero-stats mb-4">
+                <div className="stat-item">
+                  <span className="stat-number">500+</span>
+                  <span className="stat-label">Clientes satisfaites</span>
+                </div>
+                <div className="stat-item">
+                  <span className="stat-number">100+</span>
+                  <span className="stat-label">Modèles disponibles</span>
+                </div>
+                <div className="stat-item">
+                  <span className="stat-number">24h</span>
+                  <span className="stat-label">Livraison Dakar</span>
+                </div>
+              </div>
+              
+              <div className="hero-buttons">
+                <Button size="lg" className="btn-primary-elegant me-3">
+                  <i className="bi bi-bag me-2"></i>
+                  Découvrir la Collection
                 </Button>
-              </Link>
-              <Button 
-                href={`https://wa.me/${siteConfig.contact.whatsapp.replace('+', '')}`}
-                target="_blank"
-                variant="outline-light" 
-                size="lg"
-                className="whatsapp-btn border-light text-light"
-              >
-                <i className="bi bi-whatsapp me-2"></i>
-                Commander sur WhatsApp
-              </Button>
+                <Button size="lg" variant="outline-light" className="btn-outline-elegant">
+                  <i className="bi bi-play-circle me-2"></i>
+                  Voir le Lookbook
+                </Button>
+              </div>
             </div>
           </Col>
-          <Col lg={6} className="text-center mt-4 mt-lg-0">
-            <div className="hero-image-placeholder bg-white bg-opacity-10 rounded-3 p-5">
-              <i className="bi bi-flower2 display-1 text-white opacity-50"></i>
-              <p className="text-white mt-3 mb-0">
-                Image de présentation<br />
-                <small>(À remplacer par vos photos produits)</small>
-              </p>
+          
+          <Col lg={6} className="d-none d-lg-block">
+            <div className="hero-product-showcase">
+              <div className="showcase-item showcase-main">
+                <Image
+                  src="/image/img-02.jpg"
+                  alt="Hijab premium"
+                  width={300}
+                  height={400}
+                  className="showcase-image"
+                />
+                <div className="showcase-badge">Nouveauté</div>
+              </div>
+              
+              <div className="showcase-item showcase-secondary">
+                <Image
+                  src="/image/img-03.jpg"
+                  alt="Collection automne"
+                  width={200}
+                  height={250}
+                  className="showcase-image"
+                />
+              </div>
+              
+              <div className="showcase-item showcase-tertiary">
+                <Image
+                  src="/image/img-04.jpg"
+                  alt="Accessoires"
+                  width={150}
+                  height={200}
+                  className="showcase-image"
+                />
+              </div>
             </div>
           </Col>
         </Row>
       </Container>
+      
+      <div className="hero-scroll-indicator">
+        <div className="scroll-text">Découvrir</div>
+        <div className="scroll-arrow">
+          <i className="bi bi-chevron-down"></i>
+        </div>
+      </div>
     </section>
   )
 }

@@ -1,15 +1,23 @@
-import SimpleHeader from '@/components/layout/SimpleHeader'
-import FeaturedProductsFixed from '@/components/home/FeaturedProductsFixed'
+import Hero from '@/components/home/Hero'
+import Navigation from '@/components/layout/Navigation'
+import FeaturedProducts from '@/components/home/FeaturedProducts'
+import Collections from '@/components/home/Collections'
+import Testimonials from '@/components/home/Testimonials'
+import SpecialOffer from '@/components/home/SpecialOffer'
+import Newsletter from '@/components/home/Newsletter'
+import Footer from '@/components/layout/Footer'
 
 export default function Home() {
   return (
-    <div>
-      <SimpleHeader />
-      <FeaturedProductsFixed />
-      <div className="text-center my-5">
-        <h1>Hijab Élégance Dakar</h1>
-        <p>Votre boutique de mode islamique au Sénégal</p>
-      </div>
-    </div>
+    <main className="min-vh-100">
+      <Navigation />
+      <Hero />
+      <Collections />
+      <FeaturedProducts />
+      <SpecialOffer />
+      <Testimonials />
+      <Newsletter />
+      <Footer />
+    </main>
   )
 }
